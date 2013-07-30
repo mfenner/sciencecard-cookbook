@@ -24,5 +24,5 @@ end
 web_app "sciencecard" do
   docroot "/vagrant/public"
   template "sciencecard.conf.erb"
-  notifies :restart, resources(:service => "apache2")
+  notifies :reload, resources(:service => "apache2")
 end
